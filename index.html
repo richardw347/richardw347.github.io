@@ -50,10 +50,16 @@
         Computer Vision, Robotics and Software Engineering Lead.
       </h1>
       <p class="hero-cta">
-        <a class="cta-btn cta-btn--hero" href="#about">Get in touch</a>
+        <span class="about-wrapper__cta">
+          <a id='random_button' class="cta-btn cta-btn--hero" onclick="randomlinks()" href="">Random Project</a>
+        </span>
+        &nbsp;
+        <span class="about-wrapper__cta">
+          <a class="cta-btn cta-btn--hero" href="#contact">Get in touch</a>
+        </span>
       </p>
     </section>
-    <a href="#about" class="scroll-down-link" aria-label="scroll-down">
+    <a href="#contact" class="scroll-down-link" aria-label="scroll-down">
       <div class="scroll-down"></div>
     </a>
   </div>
@@ -84,7 +90,7 @@
           </p>
           <p class="about-wrapper__info-text">
             This page collects together some of my favourite personal projects,
-            reminding myself of of the benefits of tenacity and providing a source of inspiration for future work.
+            reminding myself of things that I've done and providing a source of inspiration for future work.
           </p>
 
 
@@ -104,19 +110,28 @@
         <h2 class="section-title dark-blue-text">Projects</h2>
 
         <!-- Each .row is a project -->
-        <article class="row">
+        <article class="row" id="project1">
           <div class="project-wrapper__text">
             <h3 class="project-wrapper__text-title">Sprung A Leak</h3>
             <p class="project-wrapper__text-info">
-              I developed a framework to allow two Pepper robots to perform a play within a large-scale, permanent art
-              installation.
-              This involved the development of a custom navigation system as well as integration with existing Pepper
-              APIs
-              to allow the robots to perform physical gestures.
-              The exhibit has run for 6 months at the Tate Liverpool and was visited by over 140,000 people before going
-              on tour to to Haus der Kunst
-              (Munich), M(Leuven) and finally Art Tower Mito in Japan.
+              This robot-as-art exhibit was completed as an additional project during my PostDoc. The resulting
+              exhibition ran for 6 months at the Tate Liverpool (visited by 140,000 people) before going on tour
+              to Haus der Kunst (Munich, Germany) M Museum (Leuven, Beligum) and Art Tower Mito (Mito, Japan).</p>
+
+            <p class="project-wrapper__text-info">
+              Working with a close friend (also studying Robotics) and artist Cecil B Evans, I developed a framework to
+              allow
+              two 'Pepper' robots to perform a play within a large-scale, permanent art exhibition where members of the
+              public
+              were encouraged to enter and freely explore the space.
             </p>
+            <p class="project-wrapper__text-info">
+              This framework included a custom navigation system, as well as integration with existing Pepper API,
+              allowing
+              the robots to move freely around the space and perform physical gestures while
+              avoiding collisions with the gallery space itself and the roaming public.
+            </p>
+            <p>Many late nights in both Tate Liverpool and Beligum were had.</p>
             <div class="project-wrapper__text-btns">
               <a href="https://www.tate.org.uk/whats-on/tate-liverpool/cecile-b-evans" target="_blank"
                 class="cta-btn text-color-main">Video</a>
@@ -142,11 +157,12 @@
         <!-- /END Project -->
 
         <!-- Each .row is a project -->
-        <article class="row">
+        <article class="row" id="project2">
           <div class="project-wrapper__text">
             <h3 class="project-wrapper__text-title">Robocup@Work & RoCKIn@Work</h3>
             <p class="project-wrapper__text-info">
-              While at the University of Liverpool I competed with fellow members of our robotics lab in several
+              While at the University of Liverpool I competed with fellow members of our robotics lab (smARTlab!) in
+              several
               robotics competitions. My main contributions were the development of the object recognition framework
               for textureless objects, and programming behaviours using hierarchical concurrent state machines. We did
               well as a team winning the 2014 Robocup@Work World Championships as well as the 2015 RoCKin@Work
@@ -174,7 +190,40 @@
         <!-- /END Project -->
 
         <!-- Each .row is a project -->
-        <article class="row">
+        <article class="row" id="project3">
+          <div class="project-wrapper__text">
+            <h3 class="project-wrapper__text-title">Shoebot</h3>
+            <p class="project-wrapper__text-info">
+              I recently started a robotics project with my fiance called 'Shoebot'. The aim of Shoebot is to be a
+              supercharged home cleaning robot. Building on top of an iRobot Create 2, we are aiming to imbue
+              Shoebot with some additional capabilities including better navigation so it can clean more efficiently,
+              the ability to water (mist) the indoor plants and, finally, being able to tidy up our shoes which we
+              are forever leaving in random places in the flat - or at least keep a tally on who is the worst culprit.
+
+            </p>
+            <div class="project-wrapper__text-btns">
+              <a href="https://github.com/richardw347/shoebot" target="_blank" class="cta-btn text-color-main">Shoebot
+                Project</a>
+              <a href="https://github.com/richardw347/ld19_lidar" target="_blank" class="cta-btn text-color-main">LD19
+                LIDAR</a>
+
+              <a href="https://github.com/richardw347/create_robot" target="_blank"
+                class="cta-btn text-color-main">Create Driver</a>
+            </div>
+          </div>
+
+          <div class="project-wrapper__image">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <div class="thumbnail rounded">
+                <img src="./assets/shoebot.jpg" class="img-fluid" alt="Project Image" />
+              </div>
+            </a>
+          </div>
+        </article>
+        <!-- /END Project -->
+
+        <!-- Each .row is a project -->
+        <article class="row" id="project4">
           <div class="project-wrapper__text">
             <h3 class="project-wrapper__text-title">Human Pose Analysis</h3>
             <p class="project-wrapper__text-info">
@@ -203,14 +252,21 @@
         <!-- /END Project -->
 
         <!-- Each .row is a project -->
-        <article class="row">
+        <article class="row" id="project5">
           <div class="project-wrapper__text">
             <h3 class="project-wrapper__text-title">LD19 Lidar ROS 2.0 Driver </h3>
             <p class="project-wrapper__text-info">
-              The LD19 is a very low cost compact LIDAR sensor with a 12 metre range and a 360 degree FOV.
-              This project is a ROS 2.0 sensor driver node written in C++. In addition to the node and
-              drive I've added Github actions to automatically run tests/linters as well as build
+              This project is a ROS 2.0 sensor driver node written in C++ developed especially for a LDRobot LD19 sensor
+              I received
+              for my support of the kickstarter project. The LD19 is a very low cost compact LIDAR sensor with a 12
+              metre range
+              and a 360 degree FOV, LDRobot provide a basic ROS 1 driver but I wanted to learn ROS 2.0, so decided to
+              write my own
+              driver for the laser.
+              In addition to the driver I've added Github actions to automatically run tests/linters as well as build
               and deploy a Docker container for the driver.
+
+              This project served a double purpose, as I wanted to use the driver for ShoeBot, another personal project.
             </p>
             <div class="project-wrapper__text-btns">
               <a href="https://hub.docker.com/repository/docker/richardw347/ld19_lidar" target="_blank"
@@ -230,19 +286,28 @@
         </article>
 
         <!-- Each .row is a project -->
-        <article class="row">
+        <article class="row" id="project6">
           <div class="project-wrapper__text">
             <h3 class="project-wrapper__text-title">Roboclaw Motor Controller Driver</h3>
             <p class="project-wrapper__text-info">
-              This project is a python-based ROS 1.0 driver for the Roboclaw series of motor controllers.
+              This project is for two drivers I've written for the Roboclaw series of motor controllers.
+              I've used the Roboclaw motor controllers for several personal projects as well as during my PostDoc on the
+              Mitro telepresence robot.
+
               The driver is geared around the use case of a differential drive robot base so it includes
               interface for controlling the base using linear and angular velocity commands as well
               calculating and publishing odometry.
+
+              I released both the python and C++ projects as open source for the community to use for
+              their Roboclaw based projects.
             </p>
             <div class="project-wrapper__text-btns">
               <a href="https://github.com/richardw347/roboclaw_python" target="_blank"
-                class="cta-btn text-color-main">Source
-                Code</a>
+                class="cta-btn text-color-main">Python Project</a>
+              <a href="https://github.com/richardw347/roboclaw_driver" target="_blank"
+                class="cta-btn text-color-main">C++ Project</a>
+              <a href="https://github.com/smARTLab-liv/mitro" target="_blank" class="cta-btn text-color-main">Mitro
+                Project</a>
             </div>
 
           </div>
@@ -299,6 +364,20 @@
   </footer>
   <!-- END Footer Section -->
 
+  <script type="text/javascript">
+    function randomlinks() {
+      var myrandom = Math.round(Math.random() * 5);
+      var links = new Array();
+      links[0] = "#project1";
+      links[1] = "#project2";
+      links[2] = "#project3";
+      links[3] = "#project4";
+      links[4] = "#project5";
+      links[5] = "#project6";
+      document.getElementById("random_button").href = links[myrandom];
+      return;
+    }
+  </script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
