@@ -161,6 +161,46 @@
         <!-- Each .row is a project -->
         <article class="row" id="project2">
           <div class="project-wrapper__text">
+            <h3 class="project-wrapper__text-title">Jetson Nano Object Detection</h3>
+            <p class="project-wrapper__text-info">
+              This is an example project demonstrating the use of optimised object detection network deployed on a
+              Jetson Nano. The example demonstrates a Mobilenet V2 SSD network, trained on a custom dataset of mini
+              chocolate bars. The network is trained using the PyTorch framework, converted to ONNX format and then
+              deployed on the Jetson Nano using the ONNX TensorRT runtime. This approach results in interface speeds
+              of >30 FPS, allowing the network to be used in real-time applications.
+            </p>
+            <p class="project-wrapper__text-info">
+              This network was used in a very simple demonstration unit I built for a tradeshows, that uses an Automata
+              Eva robot arm to pick up and place mini chocolate bars. It was quite a challenge especially to get the
+              CSI camera interface working on the Jetson Nano, but it was a lot of fun to build. I hope by sharing it
+              others can avoid some of the pitfalls I encountered and build their own exiting projects.
+            </p>
+            <div class="project-wrapper__text-btns">
+              <a href="https://github.com/richardw347/jetson_detect" target="_blank"
+                class="cta-btn text-color-main">Code</a>
+            </div>
+          </div>
+
+          <div class="project-wrapper__image">
+
+            <iframe width="650" height="380" src="https://www.youtube.com/embed/2GZD3StAzpc"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+            &nbsp;
+            &nbsp;
+            <iframe width="650" height="450" src="https://www.youtube.com/embed/Kh1NCixiBso"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+            </a>
+          </div>
+        </article>
+        <!-- /END Project -->
+
+        <!-- Each .row is a project -->
+        <article class="row" id="project3">
+          <div class="project-wrapper__text">
             <h3 class="project-wrapper__text-title">Robocup@Work & RoCKIn@Work</h3>
             <p class="project-wrapper__text-info">
               While at the University of Liverpool I competed with fellow members of our robotics lab (smARTlab!) in
@@ -191,7 +231,7 @@
         <!-- /END Project -->
 
         <!-- Each .row is a project -->
-        <article class="row" id="project3">
+        <article class="row" id="project4">
           <div class="project-wrapper__text">
             <h3 class="project-wrapper__text-title">Shoebot</h3>
             <p class="project-wrapper__text-info">
@@ -223,7 +263,7 @@
         <!-- /END Project -->
 
         <!-- Each .row is a project -->
-        <article class="row" id="project4">
+        <article class="row" id="project5">
           <div class="project-wrapper__text">
             <h3 class="project-wrapper__text-title">Human Pose Analysis</h3>
             <p class="project-wrapper__text-info">
@@ -251,7 +291,7 @@
         <!-- /END Project -->
 
         <!-- Each .row is a project -->
-        <article class="row" id="project5">
+        <article class="row" id="project6">
           <div class="project-wrapper__text">
             <h3 class="project-wrapper__text-title">LD19 Lidar ROS 2.0 Driver </h3>
             <p class="project-wrapper__text-info">
@@ -284,7 +324,7 @@
         </article>
 
         <!-- Each .row is a project -->
-        <article class="row" id="project6">
+        <article class="row" id="project7">
           <div class="project-wrapper__text">
             <h3 class="project-wrapper__text-title">Roboclaw Motor Controller Driver</h3>
             <p class="project-wrapper__text-info">
@@ -371,6 +411,7 @@
       links[3] = "#project4";
       links[4] = "#project5";
       links[5] = "#project6";
+      links[6] = "#project7";
       document.getElementById("random_button").href = links[myrandom];
       return;
     }
